@@ -1,4 +1,4 @@
-let nameAndNumber = document.getElementById("title");
+let title = document.getElementById("title");
 let pokemon = document.getElementById("pokeImg");
 let evolution = document.getElementById("evolution");
 let type = document.getElementById("pokeType");
@@ -15,4 +15,8 @@ async function getPokemon() {
     let api = `https://pokeapi.co/api/v2/pokemon/${name}`;
     let response = await axios.get(api);
     console.log(response);
+    console.log(name);
+    console.log(api);
+    
+    
 }
