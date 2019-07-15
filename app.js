@@ -30,11 +30,8 @@ async function getPokemon() {
     pokeName.innerHTML = `#${number} ⠀⠀<strong>${name}</strong>`; 
     pokemon.src = img;
 
-    console.log(response.data);
-    console.log(response.data.type);
-
     for (i = 0; i < response.data.types.length; i++) {
-        type.textContent += `${response.data.types[i].type.name} ⠀⠀ ⠀ `;
+        type.textContent += `${response.data.types[i].type.name} ⠀`;
     
     }
     

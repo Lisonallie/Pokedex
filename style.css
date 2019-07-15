@@ -6,15 +6,23 @@
   text-align: center;
 }
 
-#pokeType, #name, #number {
+#pokeType,
+#name,
+#number {
   color: white;
 }
 
 #name {
-    font-variant: small-caps;
-    font-size: 25px;
+  font-variant: small-caps;
+  font-size: 25px;
 }
 
 #pokeImg {
   height: 45%;
+}
+
+#pokeType {
+  font-variant: small-caps;
+  font-size: 20px;
+  letter-spacing: 1px;
 }
