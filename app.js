@@ -7,6 +7,10 @@ let pokeNumber = document.getElementById("number");
 let pokeName = document.getElementById("name");
 
 
+title.addEventListener("onkeyup", function forceLower(title){
+    title.value.toLowerCase();
+});
+
 title.addEventListener("keypress", function (e) {
     if (e.keyCode == 13 || e.which == 13) {
         getPokemon();
