@@ -23,8 +23,12 @@ async function getPokemon() {
     let api = `https://pokeapi.co/api/v2/pokemon/${name}`;
     let response = await axios.get(api);
     let number = response.data.id;
-
+    let img = response.data.sprites.front_default;
+    
+    img.src =`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${number}.png`
     pokeName.innerHTML = `#${number} <strong>${name}</strong>`; 
+    pokemon.src = img;
+    
     
     
     
