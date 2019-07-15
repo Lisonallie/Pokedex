@@ -24,14 +24,34 @@ async function getPokemon() {
     let response = await axios.get(api);
     let number = response.data.id;
     let img = response.data.sprites.front_default;
-    let typeOfPokemon = response.data.type;
+    let typeOfPokemon = response.data.types[0].type.name;
+    let secondType = response.data.types[1].type.name;
     
     img.src =`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${number}.png`
     pokeName.innerHTML = `#${number} ⠀⠀<strong>${name}</strong>`; 
     pokemon.src = img;
-    type.innerHTML = `${typeOfPokemon}`;
+    
+    
+    for(i=0; i<response.data.types.length; i++) {
+        // type.textContent += `${response.data.types[i].type.name} ⠀⠀ ⠀ `;
+
+        if (i = 0) {
+            type.innerHTML = `${typeOfPokemon}`;
+        }
+        else {
+            type.innerHTML = `${typeOfPokemon}, ${secondType}`;
+        }
+    
+        console.log(i);
+        
+    }
+
+
+    // type.innerHTML = `${typeOfPokemon}, ${secondType}`;
+
+
     console.log(response.data);
-    console.log(response.data.type);
+    console.log(response.data.types[0].type.name);
     
     
     
