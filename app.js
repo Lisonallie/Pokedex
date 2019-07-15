@@ -34,12 +34,12 @@ async function getPokemon() {
     pokemon.src = img;
 
     for (i = 0; i < response.data.types.length; i++) {
-        type.textContent += `${response.data.types[i].type.name} ⠀`;
+        type.innerHTML += `${response.data.types[i].type.name} ⠀`;
     
     }
     
     for (i = 0; i < response.data.moves.length; i++) {
-        stat.textContent += ` ⠀${response.data.moves[i].move.name}⠀ ⠀`
+        stat.innerHTML += `${response.data.moves[i].move.name}<br>`
         if (i > 3) {
             return;
         }
