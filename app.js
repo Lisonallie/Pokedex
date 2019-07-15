@@ -7,8 +7,9 @@ let pokeNumber = document.getElementById("number");
 let pokeName = document.getElementById("name");
 
 
-title.addEventListener("onkeyup", function forceLower(title){
-    title.value.toLowerCase();
+title.addEventListener("input", function (){
+    title.value = title.value.toLowerCase();
+    
 });
 
 title.addEventListener("keypress", function (e) {
@@ -24,8 +25,6 @@ async function getPokemon() {
     let number = response.data.id;
 
     pokeName.innerHTML = `#${number} <strong>${name}</strong>`; 
-
-    console.log(response.data.id);
     
     
     
