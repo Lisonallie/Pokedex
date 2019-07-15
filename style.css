@@ -5,3 +5,7 @@
     margin: 0 auto;
     text-align: center;
 }
+
+#title, #pokeImg, #pokeType {
+    color: white;
+}
