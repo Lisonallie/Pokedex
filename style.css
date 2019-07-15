@@ -1,7 +1,7 @@
 #pokedex {
   background: red;
   height: 80vh;
-  width: 50vw;
+  max-width: 450px;
   margin: 0 auto;
   text-align: center;
   border-radius: 15px;
@@ -30,8 +30,6 @@
 
 img {
   height: 100%;
-  display: flex;
-  align-items: center;
 }
 
 #pokeType {
