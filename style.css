@@ -6,6 +6,6 @@
     text-align: center;
 }
 
-#title, #pokeImg, #pokeType {
+#pokeImg, #pokeType {
     color: white;
 }
