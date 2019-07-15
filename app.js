@@ -25,26 +25,20 @@ async function getPokemon() {
     let number = response.data.id;
     let img = response.data.sprites.front_default;
     let typeOfPokemon = response.data.types[0].type.name;
-    let secondType = response.data.types[1].type.name;
-    
+
     img.src =`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${number}.png`
     pokeName.innerHTML = `#${number} ⠀⠀<strong>${name}</strong>`; 
     pokemon.src = img;
-    
-    
-    for(i=0; i<response.data.types.length; i++) {
-        // type.textContent += `${response.data.types[i].type.name} ⠀⠀ ⠀ `;
+    type.innerHTML = `${typeOfPokemon}`;
+    console.log(response.data);
+    console.log(response.data.type);
 
-        if (i = 0) {
-            type.innerHTML = `${typeOfPokemon}`;
-        }
-        else {
-            type.innerHTML = `${typeOfPokemon}, ${secondType}`;
-        }
-    
-        console.log(i);
+
+
+    // for(i=0; i<response.data.types.length; i++) {
+    //     type.textContent += `${response.data.types[i].type.name} ⠀⠀ ⠀ `;
         
-    }
+    // }
 
 
     // type.innerHTML = `${typeOfPokemon}, ${secondType}`;
