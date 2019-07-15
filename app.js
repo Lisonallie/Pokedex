@@ -26,7 +26,7 @@ async function getPokemon() {
     let img = response.data.sprites.front_default;
     
     img.src =`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${number}.png`
-    pokeName.innerHTML = `#${number} <strong>${name}</strong>`; 
+    pokeName.innerHTML = `#${number} ⠀⠀<strong>${name}</strong>`; 
     pokemon.src = img;
     
     
