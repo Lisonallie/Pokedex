@@ -14,3 +14,7 @@
 #title {
   text-transform: lowercase;
 }
+
+#name {
+    font-variant: small-caps;
+}
