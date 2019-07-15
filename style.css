@@ -4,6 +4,7 @@
   width: 50vw;
   margin: 0 auto;
   text-align: center;
+  border-radius: 15px;
 }
 
 #pokeType,
@@ -17,8 +18,20 @@
   font-size: 25px;
 }
 
-#pokeImg {
-  height: 45%;
+.imgbg {
+  background-color: white;
+  height: 200px;
+  width: 200px;
+  margin: 0 auto;
+  border-radius: 9px;
+  display: flex;
+  align-items: center;
+}
+
+img {
+  height: 100%;
+  display: flex;
+  align-items: center;
 }
 
 #pokeType {
