@@ -15,6 +15,7 @@ title.addEventListener("input", function (){
 title.addEventListener("keypress", function (e) {
     if (e.keyCode == 13 || e.which == 13) {
         getPokemon();
+        type.textContent = "";
     }
 });
 
@@ -24,28 +25,18 @@ async function getPokemon() {
     let response = await axios.get(api);
     let number = response.data.id;
     let img = response.data.sprites.front_default;
-    let typeOfPokemon = response.data.types[0].type.name;
 
     img.src =`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${number}.png`
     pokeName.innerHTML = `#${number} ⠀⠀<strong>${name}</strong>`; 
     pokemon.src = img;
-    type.innerHTML = `${typeOfPokemon}`;
+
     console.log(response.data);
     console.log(response.data.type);
 
-
-
-    // for(i=0; i<response.data.types.length; i++) {
-    //     type.textContent += `${response.data.types[i].type.name} ⠀⠀ ⠀ `;
-        
-    // }
-
-
-    // type.innerHTML = `${typeOfPokemon}, ${secondType}`;
-
-
-    console.log(response.data);
-    console.log(response.data.types[0].type.name);
+    for (i = 0; i < response.data.types.length; i++) {
+        type.textContent += `${response.data.types[i].type.name} ⠀⠀ ⠀ `;
+    
+    }
     
     
     
