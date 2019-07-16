@@ -28,7 +28,7 @@ async function getPokemon() {
     let img = response.data.sprites.front_default;
     console.log(response.data);
 
-    if (number > 808) {
+    if (number > 802) {
         alert("The Pokémon fled 🚫.")
     }
 
