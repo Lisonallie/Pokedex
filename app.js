@@ -82,10 +82,10 @@ async function checkEvolution() {
         return;
     }
     else {
-        let name = title.value - 1;
+        let name = number - 1;
         let api3 = `https://pokeapi.co/api/v2/pokemon/${name}`;
         let response3 = await axios.get(api3);
-        let newNumber = response3.data.id;
+        let newNumber = response3.data.name;
         let newImg = response3.data.sprites.front_default;
         newImg.src = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${newNumber}.png`
         evoName.innerHTML = `#${number - 1}<br>${evoName2}`;
