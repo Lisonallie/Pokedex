@@ -20,16 +20,17 @@ title.addEventListener("keypress", function (e) {
 });
 
 async function getPokemon() {
-    let name = title.value;
+    let name = title.value
     let api = `https://pokeapi.co/api/v2/pokemon/${name}`;
     let response = await axios.get(api);
     let number = response.data.id;
+    let call = response.data.name;
     let img = response.data.sprites.front_default;
     console.log(response.data);
     
 
     img.src =`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${number}.png`
-    pokeName.innerHTML = `#${number} ⠀⠀<strong>${name}</strong>`; 
+    pokeName.innerHTML = `#${number} ⠀⠀<strong>${call}</strong>`; 
     pokemon.src = img;
 
     for (i = 0; i < response.data.types.length; i++) {
