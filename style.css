@@ -56,6 +56,7 @@ img {
   color: white;
   margin-left: 6%;
   margin-top: 5px;
+  font-family: "Audiowide", cursive;
 }
 
 #name {
@@ -67,6 +68,7 @@ img {
   text-align: left;
   margin-top: -80%;
   line-height: 11px;
+  margin-left: -5px;
 }
 #earlier-evolution {
   width: 0.0001%;

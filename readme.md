@@ -15,4 +15,4 @@ The objective was to make an app where you would be able to look up any of the 8
 When typing in a number between 1 and 803 or the specific name of the pokémon, the app shows the sprite, as well as the previous evolution if it has one. Regardless of which input type you choose, the app should always give you the name and the number of the pokémon. If you input a number above 802, the window gives an alert that the Pokémon fled.
 
 ### More Time ⌛⌛⌛
-If we had more time we would love to add an option to view the shiny form of each Pokémon and play more with the visual look of the Pokédex.
+If we had more time we would love to add an option to view the shiny form of each Pokémon, add icons for each type of Pokémon, and play more with the visual look of the Pokédex.

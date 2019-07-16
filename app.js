@@ -1,6 +1,5 @@
 let title = document.getElementById("title");
 let pokemon = document.getElementById("pokeImg");
-let evolution = document.getElementById("evolution");
 let type = document.getElementById("pokeType");
 let moves = document.getElementById("pokeStat");
 let pokeName = document.getElementById("name");
