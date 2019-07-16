@@ -26,17 +26,17 @@
 
 .imgbg {
   background-color: white;
-  height: 200px;
-  width: 200px;
+  height: 250px;
+  width: 250px;
   margin: 0 auto;
   border-radius: 9px;
   display: flex;
   align-items: center;
-  margin-top: 10px;
 }
 
 img {
-  height: 100%;
+  height: 88%;
+  margin-left: 15px;
 }
 
 #pokeType {
@@ -50,10 +50,10 @@ img {
   font-variant: small-caps;
   display: flex;
   flex-wrap: wrap;
-  font-size: 27px;
+  font-size: 23px;
   color: white;
-  margin-left: 50px;
-  margin-top: 30px;
+  margin-left: 6%;
+  margin-top: 5px;
 }
 
 #name {
