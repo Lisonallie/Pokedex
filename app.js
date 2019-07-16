@@ -5,10 +5,8 @@ let type = document.getElementById("pokeType");
 let moves = document.getElementById("pokeStat");
 let pokeName = document.getElementById("name");
 
-let evoImg1 =document.getElementById("earlier-evolution");
-let evoImg2 = document.getElementById("second-earlier-evolution");
-let evoName1 = document.getElementById("write-number");
-let evoName2 = document.getElementById("write-number-2");
+let evoImg =document.getElementById("earlier-evolution");
+let evoName = document.getElementById("write-number");
 
 
 
@@ -75,7 +73,8 @@ async function checkEvolution() {
     let name = title.value
     let apiTwo = `https://pokeapi.co/api/v2/pokemon-species/${name}`;
     let responseTwo = await axios.get(apiTwo);
-    console.log(responseTwo.data);
+    let number = responseTwo.data.id;
+    console.log(responseTwo.data.id);
     console.log(responseTwo.data.evolves_from_species);
 
     if (responseTwo.data.evolves_from_species === null) {
