@@ -42,9 +42,11 @@ img {
 }
 
 #pokeType {
+  margin-top: -5px;
   font-variant: small-caps;
   font-size: 20px;
   letter-spacing: 1px;
+  font-family: 'Glegoo', serif;
 }
 
 #pokeStat {
@@ -55,8 +57,9 @@ img {
   font-size: 23px;
   color: white;
   margin-left: 6%;
-  margin-top: 5px;
+  margin-top: -5px;
   font-family: "Audiowide", cursive;
+  line-height: 25px;
 }
 
 #name {
