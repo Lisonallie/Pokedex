@@ -74,6 +74,7 @@ async function checkEvolution() {
     let apiTwo = `https://pokeapi.co/api/v2/pokemon-species/${name}`;
     let responseTwo = await axios.get(apiTwo);
     let number = responseTwo.data.id;
+    let evoName2 = responseTwo.data.evolves_from_species.name;
     console.log(responseTwo.data.id);
     console.log(responseTwo.data.evolves_from_species);
 
@@ -81,6 +82,6 @@ async function checkEvolution() {
         return;
     }
     else {
-
+        evoName.innerHTML = `#${number - 1}<br>${evoName2}`;
     }
 }

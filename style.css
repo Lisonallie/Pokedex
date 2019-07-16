@@ -61,3 +61,10 @@ img {
 #name {
   margin-top: 5px;
 }
+
+#write-number {
+  font-variant: small-caps;
+  text-align: left;
+  margin-top: -76%;
+  line-height: 11px;
+}
