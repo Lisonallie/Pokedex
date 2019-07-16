@@ -6,6 +6,7 @@ let stat = document.getElementById("pokeStat");
 let pokeName = document.getElementById("name");
 
 
+
 title.addEventListener("input", function () {
     title.value = title.value.toLowerCase();
 
@@ -14,6 +15,9 @@ title.addEventListener("input", function () {
 title.addEventListener("keypress", function (e) {
     if (e.keyCode == 13 || e.which == 13) {
         getPokemon();
+        let name = title.value
+        let api = `https://pokeapi.co/api/v2/pokemon/${name}`;
+        urlExists(api);
         type.textContent = "";
         stat.textContent = "";
     }
@@ -28,9 +32,7 @@ async function getPokemon() {
     let img = response.data.sprites.front_default;
     console.log(response.data);
 
-    if (number > 802) {
-        alert("The Pokémon fled 🚫.")
-    }
+
 
     img.src = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${number}.png`
     pokeName.innerHTML = `#${number} ⠀⠀<strong>${call}</strong>`;
@@ -49,6 +51,18 @@ async function getPokemon() {
         }
     }
 
+}
 
-
+function urlExists(api) {
+    let http = new XMLHttpRequest();
+    http.open('GET', api, false);
+    http.send();
+    if (http.status === 404) {
+        alert("The Pokémon fled 🚫.")
+    }
+    console.log(http.status);
+    if (name > 802) {
+        alert("The Pokémon fled 🚫.")
+    }
+    
 }
