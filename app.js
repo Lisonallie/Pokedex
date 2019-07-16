@@ -23,6 +23,8 @@ title.addEventListener("keypress", function (e) {
         urlExists(api);
         type.textContent = "";
         moves.textContent = "";
+        evoImg.classList.remove('size');
+        pokemon.classList.remove('margin');
         checkEvolution();
         evoName.textContent = "";
     }
@@ -90,6 +92,7 @@ async function checkEvolution() {
         evoName.innerHTML = `#${number - 1}<br>${evoName2}`;
         console.log(newNumber)
         evoImg.src = newImg;
-        evoImg.style.cssText = "visibility: show;"
+        evoImg.classList.add('size');
+        pokemon.classList.add('margin');
     }
 }

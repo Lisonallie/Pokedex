@@ -25,7 +25,7 @@
   font-size: 25px;
 }
 
-.imgbg {
+#imgbg {
   background-color: white;
   height: 250px;
   width: 250px;
@@ -38,7 +38,7 @@
 
 img {
   height: 88%;
-  margin-left: 5px;
+  margin-left: 10px;
 }
 
 #pokeType {
@@ -69,8 +69,17 @@ img {
   line-height: 11px;
 }
 #earlier-evolution {
-  height: 19%;
-  width: 19%;
+  width: 0.0001%;
+  height: 0.0001%;
   margin-top: -84%;
   margin-left: -2.5%;
+}
+
+#earlier-evolution.size {
+  height: 19%;
+  width: 19%;
+}
+
+#pokeImg.margin {
+  margin-left: -29%;
 }
