@@ -6,9 +6,9 @@ let stat = document.getElementById("pokeStat");
 let pokeName = document.getElementById("name");
 
 
-title.addEventListener("input", function (){
+title.addEventListener("input", function () {
     title.value = title.value.toLowerCase();
-    
+
 });
 
 title.addEventListener("keypress", function (e) {
@@ -27,24 +27,28 @@ async function getPokemon() {
     let call = response.data.name;
     let img = response.data.sprites.front_default;
     console.log(response.data);
-    
 
-    img.src =`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${number}.png`
-    pokeName.innerHTML = `#${number} ⠀⠀<strong>${call}</strong>`; 
+    if (number > 802) {
+        alert("The Pokémon fled 🚫.")
+    }
+
+    img.src = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${number}.png`
+    pokeName.innerHTML = `#${number} ⠀⠀<strong>${call}</strong>`;
+
     pokemon.src = img;
 
     for (i = 0; i < response.data.types.length; i++) {
         type.innerHTML += `${response.data.types[i].type.name} ⠀`;
-    
+
     }
-    
+
     for (i = 0; i < response.data.moves.length; i++) {
         stat.innerHTML += `${response.data.moves[i].move.name}<br>`
         if (i > 3) {
             return;
         }
     }
-    
-    
-    
+
+
+
 }
