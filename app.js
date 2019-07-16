@@ -90,7 +90,6 @@ async function checkEvolution() {
         let newImg = response3.data.sprites.front_default;
         newImg.src = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${newNumber}.png`
         evoName.innerHTML = `#${number - 1}<br>${evoName2}`;
-        console.log(newNumber)
         evoImg.src = newImg;
         evoImg.classList.add('size');
         pokemon.classList.add('margin');
