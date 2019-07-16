@@ -2,7 +2,7 @@ let title = document.getElementById("title");
 let pokemon = document.getElementById("pokeImg");
 let evolution = document.getElementById("evolution");
 let type = document.getElementById("pokeType");
-let stat = document.getElementById("pokeStat");
+let moves = document.getElementById("pokeStat");
 let pokeName = document.getElementById("name");
 
 
@@ -19,7 +19,7 @@ title.addEventListener("keypress", function (e) {
         let api = `https://pokeapi.co/api/v2/pokemon/${name}`;
         urlExists(api);
         type.textContent = "";
-        stat.textContent = "";
+        moves.textContent = "";
     }
 });
 
@@ -47,7 +47,7 @@ async function getPokemon() {
     }
 
     for (i = 0; i < response.data.moves.length; i++) {
-        stat.innerHTML += `${response.data.moves[i].move.name}<br>`
+        moves.innerHTML += `${response.data.moves[i].move.name}<br>`
         if (i > 3) {
             return;
         }
@@ -64,4 +64,12 @@ function urlExists(api) {
     }
     console.log(http.status);
     
+}
+
+
+async function checkEvolution() {
+    let name = title.value
+    let apiTwo = `https://pokeapi.co/api/v2/pokemon-species/${name}`;
+    let responseTwo = await axios.get(api);
+    console.log(response.data);
 }
