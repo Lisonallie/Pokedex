@@ -32,6 +32,9 @@ async function getPokemon() {
     let img = response.data.sprites.front_default;
     console.log(response.data);
 
+    if (name > 802) {
+        alert("The Pokémon fled 🚫.")
+    }
 
     img.src = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${number}.png`
     pokeName.innerHTML = `#${number} ⠀⠀<strong>${call}</strong>`;
@@ -60,8 +63,5 @@ function urlExists(api) {
         alert("The Pokémon fled 🚫.")
     }
     console.log(http.status);
-    if (name > 802) {
-        alert("The Pokémon fled 🚫.")
-    }
     
 }
