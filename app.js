@@ -5,7 +5,7 @@ let type = document.getElementById("pokeType");
 let moves = document.getElementById("pokeStat");
 let pokeName = document.getElementById("name");
 
-let evoImg =document.getElementById("earlier-evolution");
+let evoImg = document.getElementById("earlier-evolution");
 let evoName = document.getElementById("write-number");
 
 
@@ -24,6 +24,7 @@ title.addEventListener("keypress", function (e) {
         type.textContent = "";
         moves.textContent = "";
         checkEvolution();
+        evoName.textContent = "";
     }
 });
 
@@ -65,7 +66,7 @@ function urlExists(api) {
     if (http.status === 404) {
         alert("The Pokémon fled 🚫.")
     }
-    
+
 }
 
 
@@ -75,13 +76,20 @@ async function checkEvolution() {
     let responseTwo = await axios.get(apiTwo);
     let number = responseTwo.data.id;
     let evoName2 = responseTwo.data.evolves_from_species.name;
-    console.log(responseTwo.data.id);
-    console.log(responseTwo.data.evolves_from_species);
 
     if (responseTwo.data.evolves_from_species === null) {
         return;
     }
     else {
+        let name = title.value - 1;
+        let api3 = `https://pokeapi.co/api/v2/pokemon/${name}`;
+        let response3 = await axios.get(api3);
+        let newNumber = response3.data.id;
+        let newImg = response3.data.sprites.front_default;
+        newImg.src = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${newNumber}.png`
         evoName.innerHTML = `#${number - 1}<br>${evoName2}`;
+        console.log(newNumber)
+        evoImg.src = newImg;
+        evoImg.style.cssText = "visibility: show;"
     }
 }

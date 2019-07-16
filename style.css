@@ -65,6 +65,12 @@ img {
 #write-number {
   font-variant: small-caps;
   text-align: left;
-  margin-top: -76%;
+  margin-top: -80%;
   line-height: 11px;
+}
+#earlier-evolution {
+  height: 19%;
+  width: 19%;
+  margin-top: -84%;
+  margin-left: -2.5%;
 }
