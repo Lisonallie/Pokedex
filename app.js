@@ -83,7 +83,7 @@ async function checkEvolution() {
     }
     else {
         let name = number - 1;
-        let api3 = `https://pokeapi.co/api/v2/pokemon/${name}`;
+        let api3 = `https://pokeapi.co/api/v2/pokemon/${evoName2}`;
         let response3 = await axios.get(api3);
         let newNumber = response3.data.name;
         let newImg = response3.data.sprites.front_default;
